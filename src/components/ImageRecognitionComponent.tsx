@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react'
 import { Box, Title, Text, Paper, Loader, Group, Badge, Card, Image, Progress, Button, FileInput, Stack } from '@mantine/core'
-import { preprocessImage } from '../lib/model/image'
-import { detectImage, initializeModel, type ImageDetectionResult } from '../lib/model/model'
+import { detectImage, initializeModel, preprocessImage, type ImageDetectionResult } from '../lib/model/model'
 
 export const ImageRecognitionComponent = () => {
   const [result, setResult] = useState<ImageDetectionResult | null>(null)
