@@ -37,9 +37,7 @@ export const preprocessImage = async (imageInput: JimpImageInput): Promise<Float
       const channelValue = c === 0 ? pixelColor.r : (c === 1 ? pixelColor.g : pixelColor.b)
       // 正規化: [0,255] -> [0,1] -> [(x-mean)/std]
       return (channelValue / 255.0 - mean[c]) / std[c]
-    })
-    )
-    )
+    })))
 
     // 3次元配列をFloat32Arrayに変換（NCHW形式）
     const result = new Float32Array(channels * height * width)
